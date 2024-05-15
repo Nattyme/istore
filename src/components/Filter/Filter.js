@@ -3,21 +3,27 @@ import './style.css';
 function Filter () {
     return (
         <>
-             <div className="widget">
-            <div className="widget__title">
-                Фильтр
-            </div>
+            <div className="widget">
+                <div className="widget__title">Фильтр</div>
 
-            <div className="widget__body">
-                <ul className="cat-list">
-                    <li><a href="#!">Ноутбуки</a></li>
-                    <li><a href="#!">Телефоны</a></li>
-                    <li><a href="#!">Планшеты</a></li>
-                    <li><a href="#!">Компьютеры</a></li>
-                    <li><a href="#!">Часы</a></li>
-                </ul>
+                <div className="widget__body widget__body--filters-list">
+                    <div className="filter">
+                        <div className="filter__title">Цена</div>
+                        <div className="filter__body">----</div>
+                    </div>
+
+                    <div className="filter">
+                        <div className="filter__title">Объем памяти</div>
+                        <div className="filter__body">----</div>
+                    </div>
+
+                    <div className="filter">
+                        <div className="filter__title">Цвет</div>
+                        <div className="filter__body">----</div>
+                    </div>
+
+                </div>
             </div>
-        </div>
         </>
     );
 }

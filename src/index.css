@@ -13,3 +13,23 @@ body {
     margin: 0 auto;
     padding: 0 15px;
 }
+
+.widget {
+    margin-bottom: 40px;
+}
+
+.widget__title {
+    margin-bottom: 20px;
+
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.widget__body {
+
+}
+
+.widget__body--filters-list {
+    display: grid;
+    gap: 20px;
+}
