@@ -14,8 +14,9 @@ body {
     padding: 0 15px;
 }
 
-.widget {
-    margin-bottom: 40px;
+.sidebar {
+    display: grid;
+    row-gap: 40px;
 }
 
 .widget__title {
@@ -33,3 +34,5 @@ body {
     display: grid;
     gap: 20px;
 }
+
+

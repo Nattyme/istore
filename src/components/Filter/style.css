@@ -1,0 +1,11 @@
+.filter__title {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.filter__body--price {
+    display: flex;
+    column-gap: 5px;
+    align-items: center;
+}
+

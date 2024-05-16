@@ -9,7 +9,11 @@ function Filter () {
                 <div className="widget__body widget__body--filters-list">
                     <div className="filter">
                         <div className="filter__title">Цена</div>
-                        <div className="filter__body">----</div>
+                        <div className="filter__body filter__body--price">
+                            <input type="text" className="input" value="10 000 р" />
+                            <span>-</span>
+                            <input type="text" className="input" value="80 000 р" />
+                        </div>
                     </div>
 
                     <div className="filter">
