@@ -1,3 +1,4 @@
+import Input from '../Input/Input';
 import './style.css';
 
 function Filter () {
@@ -10,9 +11,9 @@ function Filter () {
                     <div className="filter">
                         <div className="filter__title">Цена</div>
                         <div className="filter__body filter__body--price">
-                            <input type="text" className="input" value="10 000 р" />
+                            <Input value="10 000 р" />
                             <span>-</span>
-                            <input type="text" className="input" value="80 000 р" />
+                            <Input value="80 000 р"/>
                         </div>
                     </div>
 
