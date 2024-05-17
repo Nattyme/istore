@@ -1,3 +1,4 @@
+import Checkbox from '../Checkbox/Checkbox';
 import Input from '../Input/Input';
 import './style.css';
 
@@ -19,7 +20,9 @@ function Filter () {
 
                     <div className="filter">
                         <div className="filter__title">Объем памяти</div>
-                        <div className="filter__body">----</div>
+                        <div className="filter__body">
+                            <Checkbox />
+                        </div>
                     </div>
 
                     <div className="filter">
