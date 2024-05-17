@@ -1,10 +1,10 @@
 import './style.css';
 
-const Checkbox = () => {
+const Checkbox = (propsg) => {
     return (
         <div className="checkbox">
             <input type="checkbox" className="checkbox__item"/>
-            <span className="checkbox__title">128 Gb</span>
+            <span className="checkbox__title">{props.value}</span>
         </div>
     );
 }

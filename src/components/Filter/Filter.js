@@ -3,6 +3,15 @@ import Input from '../Input/Input';
 import './style.css';
 
 function Filter () {
+
+    const memoryList = [
+        '128 Gb',
+        '256 Gb',
+        '512 Gb',
+        '1 Tb',
+        '2 Tb'
+    ]
+
     return (
         <>
             <div className="widget">
@@ -21,7 +30,11 @@ function Filter () {
                     <div className="filter">
                         <div className="filter__title">Объем памяти</div>
                         <div className="filter__body">
-                            <Checkbox />
+
+                            {memoryList.map((el)=> {
+                                return <Checkbox value={el} />
+                            })}
+                            
                         </div>
                     </div>
 
