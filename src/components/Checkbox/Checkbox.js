@@ -1,6 +1,6 @@
 import './style.css';
 
-const Checkbox = (propsg) => {
+const Checkbox = (props) => {
     return (
         <div className="checkbox">
             <input type="checkbox" className="checkbox__item"/>
