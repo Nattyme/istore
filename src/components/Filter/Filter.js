@@ -13,7 +13,7 @@ function Filter () {
                         <div className="filter__body filter__body--price">
                             <Input value="10 000 р" />
                             <span>-</span>
-                            <Input value="80 000 р"/>
+                            <Input value="80 000 р" />
                         </div>
                     </div>
 

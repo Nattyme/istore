@@ -1,8 +1,9 @@
+import { useState } from 'react';
 import './style.css';
 
-function Input (props) {
-    console.log(props);
-    return <input type="text" className="input" value="10 000 р" />;
+const Input = (props) => {
+    const [price, setPrice] = useState(props.value);
+    return <input type="text" className="input" value={price} onChange={(e) => { setPrice(e.target.value) }}/>;
 }
 
 export default Input;
