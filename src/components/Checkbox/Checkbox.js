@@ -2,11 +2,11 @@ import './style.css';
 
 const Checkbox = (props) => {
     return (
-        <div className="checkbox">
-            <input type="checkbox" className="checkbox__fake"/>
-            <input type="checkbox" className="checkbox__real"/>
+        <label className="checkbox">
+            <input type="checkbox" className="checkbox__real" name="checkbox-filter"/>
+            <span className="checkbox__custom"></span>
             <span className="checkbox__title">{props.value}</span>
-        </div>
+        </label>
     );
 }
 
