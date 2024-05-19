@@ -1,0 +1,34 @@
+.checkbox__title {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    color: #000;
+}
+
+.checkbox__fake {
+    position: absolute;
+    left: -100vw;
+    width: 0;
+    height: 0;
+    z-index: -99;
+}
+
+.checkbox__real {
+    margin: 0;
+    position: relative;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #000;
+}
+
+.checkbox__real::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    
+    width: 4px;
+    height: 7px;
+    border: 2px solid #000;
+}
