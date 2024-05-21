@@ -9,3 +9,8 @@
     align-items: center;
 }
 
+.filter__body--checkbox-list {
+    display: grid;
+    row-gap: 10px;
+}
+

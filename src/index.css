@@ -39,4 +39,8 @@ body {
     gap: 20px;
 }
 
+label {
+    cursor: pointer;
+}
+
 

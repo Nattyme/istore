@@ -29,10 +29,10 @@ function Filter () {
 
                     <div className="filter">
                         <div className="filter__title">Объем памяти</div>
-                        <div className="filter__body">
+                        <div className="filter__body filter__body--checkbox-list">
 
                             {memoryList.map((el)=> {
-                                return <Checkbox value={el} />
+                                return <Checkbox key={el} value={el} />
                             })}
                             
                         </div>
