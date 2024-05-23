@@ -41,12 +41,7 @@ function Filter () {
                     <div className="filter">
                         <div className="filter__title">Цвет</div>
                         <div className="filter__body">
-
-                        <label className="checkbox">
-                            <input type="checkbox" className="checkbox__real" name="checkbox-filter"/>
-                            <span className="checkbox__custom"></span>
-                            <span className="checkbox__title">{props.value}</span>
-                        </label>
+                            
 
                         </div>
                     </div>
