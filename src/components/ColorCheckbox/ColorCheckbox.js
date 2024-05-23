@@ -9,4 +9,4 @@ const ColorCheckbox = (props) => {
     );
 };
 
-export default Checkbox;
+export default ColorCheckbox;

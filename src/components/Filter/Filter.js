@@ -1,4 +1,5 @@
 import Checkbox from '../Checkbox/Checkbox';
+import ColorCheckbox from '../ColorCheckbox/ColorCheckbox';
 import Input from '../Input/Input';
 import './style.css';
 
@@ -41,8 +42,11 @@ function Filter () {
                     <div className="filter">
                         <div className="filter__title">Цвет</div>
                         <div className="filter__body">
-                            
-
+                            <ColorCheckbox />
+                            <ColorCheckbox />
+                            <ColorCheckbox />
+                            <ColorCheckbox />
+                            <ColorCheckbox />
                         </div>
                     </div>
 
