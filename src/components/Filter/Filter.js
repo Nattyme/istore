@@ -16,6 +16,7 @@ function Filter () {
     const colorsList = [
         'white',
         'gray',
+        'black',
         'spacegray',
         'gold',
         'blue',

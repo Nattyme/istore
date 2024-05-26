@@ -49,5 +49,5 @@
 }
 
 .color-checkbox__real:checked + .color-checkbox__visible--black  {
-    border: 2px solid #0b89bf;
+    border: 2px solid #29bbfa;
 }
