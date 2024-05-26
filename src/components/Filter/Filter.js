@@ -11,6 +11,15 @@ function Filter () {
         '512 Gb',
         '1 Tb',
         '2 Tb'
+    ];
+
+    const colorsList = [
+        'white',
+        'gray',
+        'spacegray',
+        'gold',
+        'blue',
+        'green'
     ]
 
     return (
@@ -41,12 +50,12 @@ function Filter () {
 
                     <div className="filter">
                         <div className="filter__title">Цвет</div>
-                        <div className="filter__body">
-                            <ColorCheckbox />
-                            <ColorCheckbox />
-                            <ColorCheckbox />
-                            <ColorCheckbox />
-                            <ColorCheckbox />
+                        <div className="filter__body filter__body--colors-list">
+
+                            {colorsList.map((el) => {
+                                return <ColorCheckbox color={el} />
+                            })}
+                           
                         </div>
                     </div>
 
