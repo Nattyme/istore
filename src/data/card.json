@@ -1,0 +1,49 @@
+[
+    {
+        "img": "01",
+        "title": "Часы Apple Watch Белый",
+        "price": "18 000"
+    },
+
+    {
+        "img": "02",
+        "title": "iMac",
+        "price": "140 000"
+    },
+
+    {
+        "img": "03",
+        "title": "iPad",
+        "price": "60 000"
+    },
+
+    {
+        "img": "04",
+        "title": "iPhone",
+        "price": "50 000"
+    },
+
+    {
+        "img": "05",
+        "title": "MacMini",
+        "price": "78 280"
+    },
+
+    {
+        "img": "06",
+        "title": "MacPro",
+        "price": "120 000"
+    },
+
+    {
+        "img": "07",
+        "title": "MacPro",
+        "price": "180 000"
+    },
+
+    {
+        "img": "08",
+        "title": "Apple MacBook Air 13",
+        "price": "110 000"
+    }
+]

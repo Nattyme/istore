@@ -1,6 +1,7 @@
 import './style.css';
 import Categories from '../Categories/Categories';
 import Filter from '../Filter/Filter';
+import Card from '../Card/Card';
 
 function Main () {
     return (
@@ -9,7 +10,9 @@ function Main () {
                <Categories />
                <Filter />
             </aside>
-            <div className="content">content</div>
+            <div className="content">
+                <Card />
+            </div>
         </main>
     )
 }
