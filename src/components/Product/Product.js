@@ -1,6 +1,6 @@
 import './style.css';
 
-const Card = () => {
+const Product = () => {
     return (
         <div className='card'>
 
@@ -11,4 +11,4 @@ const Card = () => {
     );
 }
 
-export default Card;
+export default Product;

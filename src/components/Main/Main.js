@@ -1,7 +1,7 @@
 import './style.css';
 import Categories from '../Categories/Categories';
 import Filter from '../Filter/Filter';
-import Card from '../Card/Card';
+import Product from '../Product/Product';
 
 function Main () {
     return (
@@ -11,7 +11,7 @@ function Main () {
                <Filter />
             </aside>
             <div className="content">
-                <Card />
+                <Product />
             </div>
         </main>
     )
