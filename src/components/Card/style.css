@@ -1,0 +1,22 @@
+.card {
+    display: grid;
+    row-gap: 10px;
+}
+
+.card__img {
+    width: 250px;
+    height: 220px;
+    object-fit: contain;
+}
+
+.card__title {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.card__price {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 300;
+}

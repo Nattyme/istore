@@ -1,7 +1,7 @@
 import './style.css';
 import Categories from '../Categories/Categories';
 import Filter from '../Filter/Filter';
-import Product from '../Product/Product';
+import Product from '../Card/Card';
 
 function Main () {
     return (
