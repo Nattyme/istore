@@ -6,3 +6,9 @@
     grid-template-columns: 3fr 9fr;
     column-gap: 20px;
 }
+
+.content--cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}

@@ -1,7 +1,7 @@
 import './style.css';
 import Categories from '../Categories/Categories';
 import Filter from '../Filter/Filter';
-import Product from '../Card/Card';
+import Card from '../Card/Card';
 
 function Main () {
     return (
@@ -10,8 +10,15 @@ function Main () {
                <Categories />
                <Filter />
             </aside>
-            <div className="content">
-                <Product />
+            <div className="content content--cards-grid">
+                <Card />
+                <Card />
+                <Card />
+                <Card />
+                <Card />
+                <Card />
+                <Card />
+                <Card />
             </div>
         </main>
     )
