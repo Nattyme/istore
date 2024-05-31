@@ -24,6 +24,7 @@ body {
 
 .sidebar {
     display: grid;
+    align-content: flex-start;
     row-gap: 40px;
 }
 
