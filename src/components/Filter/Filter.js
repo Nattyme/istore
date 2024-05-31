@@ -54,7 +54,7 @@ function Filter () {
                         <div className="filter__body filter__body--colors-list">
 
                             {colorsList.map((el) => {
-                                return <ColorCheckbox color={el} />
+                                return <ColorCheckbox key={el} color={el} />
                             })}
                            
                         </div>
