@@ -3,7 +3,8 @@ import Categories from '../Categories/Categories';
 import Filter from '../Filter/Filter';
 import Card from '../Card/Card';
 
-function Main () {
+function Main ({products}) {
+    
     return (
         <main className="main container">
             <aside className="sidebar">
@@ -11,14 +12,7 @@ function Main () {
                <Filter />
             </aside>
             <div className="content content--cards-grid">
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
+                {products.map((product, index) => <Card key={index} product={product} />)}
             </div>
         </main>
     )
