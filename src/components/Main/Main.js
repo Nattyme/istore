@@ -1,7 +1,7 @@
 import './style.css';
-import Categories from '../Categories/Categories';
-import Filter from '../Filter/Filter';
-import Card from '../Card/Card';
+import {Categories as Categories} from '../Categories/Categories';
+import {Filter as Filter}  from '../Filter/Filter';
+import {Card as Card} from '../Card/Card';
 
 function Main ({products}) {
     return (
@@ -17,4 +17,4 @@ function Main ({products}) {
     )
 }
 
-export default Main;
+export {Main as Main};

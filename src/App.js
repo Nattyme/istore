@@ -1,6 +1,6 @@
-import Header from './components/Header/Header';
-import Main from './components/Main/Main';
-import Footer from './components/Footer/Footer';
+import {Header as Header} from './components/Header/Header';
+import {Main as Main} from './components/Main/Main';
+import {Footer as Footer} from './components/Footer/Footer';
 
 import products from './data/products.json';
 
@@ -16,4 +16,4 @@ function App() {
     );
 }
 
-export default App;
+export {App as App};

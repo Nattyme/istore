@@ -12,4 +12,4 @@ const Card = ({product}) => {
     );
 }
 
-export default Card;
+export {Card as Card};

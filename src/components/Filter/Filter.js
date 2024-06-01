@@ -1,6 +1,6 @@
-import Checkbox from '../Checkbox/Checkbox';
-import ColorCheckbox from '../ColorCheckbox/ColorCheckbox';
-import Input from '../Input/Input';
+import {Checkbox as Checkbox} from '../Checkbox/Checkbox';
+import {ColorCheckbox as ColorCheckbox} from '../ColorCheckbox/ColorCheckbox';
+import {Input as Input} from '../Input/Input';
 import './style.css';
 
 function Filter () {
@@ -66,4 +66,4 @@ function Filter () {
     );
 }
 
-export default Filter;
+export {Filter as Filter};

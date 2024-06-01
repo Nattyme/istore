@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState as useState} from 'react';
 import './style.css';
 
 const Input = (props) => {
@@ -6,4 +6,4 @@ const Input = (props) => {
     return <input type="text" className="input" value={price} onChange={(e) => { setPrice(e.target.value) }}/>;
 }
 
-export default Input;
+export {Input as Input};

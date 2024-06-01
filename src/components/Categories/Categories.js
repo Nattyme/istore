@@ -9,6 +9,7 @@ function Categories () {
 
             <div className="widget__body">
                 <ul className="cat-list">
+                    <li><a href="#!">Все</a></li>
                     <li><a href="#!">Ноутбуки</a></li>
                     <li><a href="#!">Телефоны</a></li>
                     <li><a href="#!">Планшеты</a></li>
@@ -20,4 +21,4 @@ function Categories () {
     )
 }
 
-export default Categories;
+export {Categories as Categories};
