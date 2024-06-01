@@ -1,12 +1,13 @@
 import './style.css';
 
-const Card = () => {
+const Card = ({product}) => {
+    
     return (
         <article className='card'>
 
-            <img className="card__img" src="./img/01.jpg" srcSet="./../../img/01@2x.jpg 2x" alt="Часы Apple Watch Белый"/>
-            <h3 className="card__title">Часы Apple Watch Белый</h3>
-            <p className="card__price">18 000 ₽</p>
+            <img className="card__img" src={`./img/${product.img}.jpg`} srcSet={`./img/${product.imgRetina}.jpg 2x`} alt={product.title}/>
+            <h3 className="card__title">{product.title}</h3>
+            <p className="card__price">{product.price}₽</p>
         </article>
     );
 }

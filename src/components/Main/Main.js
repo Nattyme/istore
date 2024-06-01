@@ -4,7 +4,6 @@ import Filter from '../Filter/Filter';
 import Card from '../Card/Card';
 
 function Main ({products}) {
-    
     return (
         <main className="main container">
             <aside className="sidebar">
