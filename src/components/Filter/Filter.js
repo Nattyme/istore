@@ -1,9 +1,15 @@
+import { useState } from 'react';
 import {Checkbox as Checkbox} from '../Checkbox/Checkbox';
 import {ColorCheckbox as ColorCheckbox} from '../ColorCheckbox/ColorCheckbox';
 import {Input as Input} from '../Input/Input';
 import './style.css';
 
 function Filter () {
+
+    const [price, setPrice] = useState({
+        min: 10000,
+        max: 1000
+    });
 
     const memoryList = [
         '128 Gb',
