@@ -4,7 +4,7 @@ import {ColorCheckbox as ColorCheckbox} from '../ColorCheckbox/ColorCheckbox';
 import {Input as Input} from '../Input/Input';
 import './style.css';
 
-const Filter = () => {
+const Filter = ({filter}) => {
 
     const [price, setPrice] = useState({
         min: 10000,
@@ -38,9 +38,9 @@ const Filter = () => {
                     <div className="filter">
                         <div className="filter__title">Цена</div>
                         <div className="filter__body filter__body--price">
-                            <Input value={`${price.min} р`}/>
+                            <Input value={`${filter.price.min} р`}/>
                             <span>-</span>
-                            <Input value={`${price.max} р`}/>
+                            <Input value={`${filter.price.max} р`}/>
                         </div>
                     </div>
 
