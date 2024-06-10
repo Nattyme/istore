@@ -4,11 +4,11 @@ import {ColorCheckbox as ColorCheckbox} from '../ColorCheckbox/ColorCheckbox';
 import {Input as Input} from '../Input/Input';
 import './style.css';
 
-function Filter () {
+const Filter = () => {
 
     const [price, setPrice] = useState({
         min: 10000,
-        max: 1000
+        max: 100000
     });
 
     const memoryList = [
@@ -38,9 +38,9 @@ function Filter () {
                     <div className="filter">
                         <div className="filter__title">Цена</div>
                         <div className="filter__body filter__body--price">
-                            <Input value="10 000 р" />
+                            <Input value={`${price.min} р`}/>
                             <span>-</span>
-                            <Input value="80 000 р" />
+                            <Input value={`${price.max} р`}/>
                         </div>
                     </div>
 
