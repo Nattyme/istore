@@ -10,8 +10,17 @@ function Main ({products, filter}) {
                <Categories />
                <Filter filter={filter}/>
             </aside>
+
+
             <div className="content content--cards-grid">
-                {products.map((product, index) => <Card key={index} product={product} />)}
+                <div>
+                    <p>Категория:</p>
+                    <p>Цена от:{filter.price.min}</p>
+                    <p>Цена до:{filter.price.max}</p>
+                </div>
+                {products.map((product, index) => (
+                    <Card key={index} product={product} />
+                ))}
             </div>
         </main>
     )
