@@ -3,12 +3,12 @@ import {Categories as Categories} from '../Categories/Categories';
 import {Filter as Filter}  from '../Filter/Filter';
 import {Card as Card} from '../Card/Card';
 
-function Main ({products, filter}) {
+function Main ({products, filter, setFilter}) {
     return (
         <main className="main container">
             <aside className="sidebar">
                <Categories />
-               <Filter filter={filter}/>
+               <Filter filter={filter} setFilter={setFilter}/>
             </aside>
 
 
