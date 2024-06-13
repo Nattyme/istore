@@ -10,8 +10,15 @@ const Input = ({value, setFilter, type}) => {
     className="input" 
     value={value} 
     onChange={ (e) => { 
+       
         setFilter((prev) => {
-            // prev.price.min
+            return {
+                ...prev,
+                price: {
+                    ...prev.price,
+                    [type]: e.target.value,
+                }
+            }
         }) 
     }}
     />
