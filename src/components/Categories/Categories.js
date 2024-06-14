@@ -9,12 +9,12 @@ function Categories () {
 
             <div className="widget__body">
                 <ul className="cat-list">
-                    <li><a href="#!">Все</a></li>
-                    <li><a href="#!">Ноутбуки</a></li>
-                    <li><a href="#!">Телефоны</a></li>
-                    <li><a href="#!">Планшеты</a></li>
-                    <li><a href="#!">Компьютеры</a></li>
-                    <li><a href="#!">Часы</a></li>
+                    <li><a href="#!" data-cat="all">Все</a></li>
+                    <li><a href="#!" data-cat="note">Ноутбуки</a></li>
+                    <li><a href="#!" data-cat="phone">Телефоны</a></li>
+                    <li><a href="#!" data-cat="tablet">Планшеты</a></li>
+                    <li><a href="#!" data-cat="comp">Компьютеры</a></li>
+                    <li><a href="#!" data-cat="watch">Часы</a></li>
                 </ul>
             </div>
         </div>
