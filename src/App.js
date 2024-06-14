@@ -9,7 +9,17 @@ function App() {
 
     const [products, setProducts] = useState(productsData);
 
+    const categories = [];
+    productsData.forEach((product)=>{
+        if(!categories.includes(product.cat)) {
+            categories.push(product.cat);
+        }
+    })
+
+    console.log(categories)
+
     const [filter, setFilter] = useState({
+        category: 'all',
         price: {
             min: 10000,
             max: 100000,
