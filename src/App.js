@@ -9,14 +9,12 @@ function App() {
 
     const [products, setProducts] = useState(productsData);
 
-    const categories = [];
+    const cats = ['all'];
     productsData.forEach((product)=>{
-        if(!categories.includes(product.cat)) {
-            categories.push(product.cat);
+        if(!cats.includes(product.cat)) {
+            cats.push(product.cat);
         }
     })
-
-    console.log(categories)
 
     const [filter, setFilter] = useState({
         category: 'all',

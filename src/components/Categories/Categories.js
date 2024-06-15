@@ -1,6 +1,6 @@
 import './style.css';
 
-function Categories () {
+const Categories = ({cats}) => {
     return (
         <div className="widget">
             <div className="widget__title">
@@ -9,16 +9,17 @@ function Categories () {
 
             <div className="widget__body">
                 <ul className="cat-list">
-                    <li><a href="#!" data-cat="all">Все</a></li>
-                    <li><a href="#!" data-cat="note">Ноутбуки</a></li>
-                    <li><a href="#!" data-cat="phone">Телефоны</a></li>
-                    <li><a href="#!" data-cat="tablet">Планшеты</a></li>
-                    <li><a href="#!" data-cat="comp">Компьютеры</a></li>
-                    <li><a href="#!" data-cat="watch">Часы</a></li>
+                    {cats.map((cat, index)=>{
+                        return {<li key={index}>
+                                    <a href="#!" data-cat={cat}>
+                                        {cat}
+                                    </a>
+                                </li>}
+                    })}
                 </ul>
             </div>
         </div>
-    )
+    );
 }
 
 export {Categories as Categories};
