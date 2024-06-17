@@ -38,7 +38,12 @@ function App() {
     return (
         <div className="App">
         <Header />
-        <Main products = {products} filter={filter} setFilter={setFilter}/>
+        <Main 
+            products = {products} 
+            filter={filter} 
+            setFilter={setFilter}
+            cats={cats}
+            />
         <Footer />
         </div> 
     );

@@ -9,12 +9,14 @@ const Categories = ({cats}) => {
 
             <div className="widget__body">
                 <ul className="cat-list">
-                    {cats.map((cat, index)=>{
-                        return {<li key={index}>
-                                    <a href="#!" data-cat={cat}>
-                                        {cat}
-                                    </a>
-                                </li>}
+                {cats.map((cat, index)=>{
+                        return (
+                            <li key={index}>
+                                <a href="#!" data-cat={cat}>
+                                    {cat}
+                                </a>
+                            </li>
+                        );
                     })}
                 </ul>
             </div>
