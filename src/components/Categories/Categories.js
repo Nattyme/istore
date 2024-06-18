@@ -1,6 +1,6 @@
 import './style.css';
 
-const Categories = ({cats}) => {
+const Categories = ({cats, catsData}) => {
     return (
         <div className="widget">
             <div className="widget__title">

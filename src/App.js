@@ -4,6 +4,7 @@ import {Main as Main} from './components/Main/Main';
 import {Footer as Footer} from './components/Footer/Footer';
 
 import productsData from './data/products.json';
+import catsData from './data/cats.json';
 
 function App() {
 
@@ -42,6 +43,7 @@ function App() {
             products = {products} 
             filter={filter} 
             setFilter={setFilter}
+            catsdata={catsData}
             cats={cats}
             />
         <Footer />
