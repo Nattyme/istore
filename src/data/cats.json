@@ -1,0 +1,25 @@
+[
+    {
+        "slug": "watch",
+        "title": "Часы"
+    },
+
+    {
+        "slug": "comp",
+        "title": "Компьютеры"
+    },
+
+    {
+        "slug": "tablet",
+        "title": "Планшеты"
+    },
+
+    {
+        "slug": "phone",
+        "title": "Смаротфон"
+    },
+    {
+        "slug": "note",
+        "title": "Ноутбуки"
+    }
+]
