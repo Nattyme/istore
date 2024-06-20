@@ -13,7 +13,11 @@ const Categories = ({cats, catsData}) => {
                         return (
                             <li key={index}>
                                 <a href="#!" data-cat={cat}>
-                                    {cat}
+                                    {catsData.find((value) => {
+                                        if(value.slug === cat) {
+                                            return value.title;
+                                        }
+                                    })}
                                 </a>
                             </li>
                         );
