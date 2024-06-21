@@ -7,14 +7,20 @@ const Main = ({products, filter, setFilter, cats, catsData}) => {
     return (
         <main className="main container">
             <aside className="sidebar">
-               <Categories cats={cats} catsData={catsData}/>
-               <Filter filter={filter} setFilter={setFilter}/>
+               <Categories 
+                    cats={cats} 
+                    catsData={catsData}
+                    setFilter={setFilter}
+                />
+               <Filter 
+                    filter={filter} 
+                    setFilter={setFilter}/>
             </aside>
 
 
             <div className="content content--cards-grid">
                 <div>
-                    <p>Категория:</p>
+                    <p>Категория:{filter.category}</p>
                     <p>Цена от:{filter.price.min}</p>
                     <p>Цена до:{filter.price.max}</p>
                 </div>

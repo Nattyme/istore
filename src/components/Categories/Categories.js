@@ -1,7 +1,6 @@
 import './style.css';
 
-const Categories = ({cats, catsData}) => {
-    console.log(catsData)
+const Categories = ({cats, catsData, setFilter}) => {
     const catsList = cats.map((cat, index) => {
         
         const catInfo = catsData.find((value) => {
@@ -11,9 +10,21 @@ const Categories = ({cats, catsData}) => {
             }
         });
 
+        const clickHandler = (e) => {
+            e.preventDefault();
+            console.log('Change category!')
+            console.log(e.target.dataset.cat)
+            setFilter ((prev) => {
+                return {
+                    ...prev,
+                    category: e.target.dataset.cat,
+                }
+            })
+        }
+
         return (
             <li key={index}>
-                <a href="#!" data-cat={cat}>
+                <a href="#!" data-cat={cat} onClick={clickHandler}>
                     {catInfo && catInfo.title}
                 </a>
             </li>
