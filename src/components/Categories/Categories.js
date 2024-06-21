@@ -1,16 +1,24 @@
 import './style.css';
 
 const Categories = ({cats, catsData}) => {
+    console.log(catsData)
+    const catsList = cats.map((cat, index) => {
+        
+        const catInfo = catsData.find((value) => {
+           
+            if (value.slug === cat) {
+                return true;
+            }
+        });
 
-    const catsList =  cats.map((cat, index)=>{
         return (
             <li key={index}>
                 <a href="#!" data-cat={cat}>
-                    {cat}
+                    {catInfo && catInfo.title}
                 </a>
             </li>
         );
-    })
+    });
     
     return (
         <div className="widget">

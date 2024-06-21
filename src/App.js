@@ -43,7 +43,7 @@ function App() {
             products = {products} 
             filter={filter} 
             setFilter={setFilter}
-            catsdata={catsData}
+            catsData={catsData}
             cats={cats}
             />
         <Footer />
