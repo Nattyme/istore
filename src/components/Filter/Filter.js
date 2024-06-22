@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useEffect } from 'react';
 import {Checkbox as Checkbox} from '../Checkbox/Checkbox';
 import {ColorCheckbox as ColorCheckbox} from '../ColorCheckbox/ColorCheckbox';
 import {Input as Input} from '../Input/Input';
@@ -6,31 +7,40 @@ import './style.css';
 
 const Filter = ({filter, setFilter}) => {
 
-    const [price, setPrice] = useState({
-        min: 10000,
-        max: 200000
-    });
-
-    // const memoryList = [
-    //     '128 Gb',
-    //     '256 Gb',
-    //     '512 Gb',
-    //     '1 Tb',
-    //     '2 Tb'
-    // ];
-
-    const memoryList = {
+    const [memoryList, setMemoryList] = useState({
         '128 Gb': true,
         '256 Gb': true,
         '512 Gb': true,
         '1 Tb': true,
         '2 Tb': true
-    }
+    });
+
+    useEffect(() => {
+        let memoryFilter = [];
+
+        for(let key in memoryList) {
+            if (memoryList[key]) memoryFilter.push(key);
+        }
+
+
+        setFilter((prev) => {
+            return {
+                ...prev,
+                memory: memoryFilter,
+            };
+        });
+    }, [memoryList]);
 
     let memoryListJSX = [];
+
     for (let key in memoryList) {
         memoryListJSX.push(
-        <Checkbox key={key} value={key} state={memoryList[key]}/>
+        <Checkbox 
+            key={key}
+            memoryList={memoryList} 
+            setMemoryList={setMemoryList}
+            value={key} 
+        />
     );
     }
 
