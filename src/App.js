@@ -23,23 +23,33 @@ function App() {
             min: 10000,
             max: 200000,
         },
+
+        memory: ['512Gb', '1Tb', '2Tb'],
     });
 
     useEffect(() => {
         setProducts(function(){
             let filteredItems = [];
+
             //Фильтр по категории
             filteredItems = productsData.filter((product) => {
                 if (filter.category == 'all') return true;
                 return filter.category == product.cat;
-            })
+            });
 
             //Фильтр по цене
             filteredItems = filteredItems.filter((product)=>{
                 if (product.price >= filter.price.min && product.price <= filter.price.max) {
                     return true;
                 }
-            })
+            });
+
+            //Фильтр по памяти
+            filteredItems = filteredItems.filter((product)=>{
+                if (filter.memory.length === 0) return true;
+
+                return filter.memory.includes(product.memory); 
+            });
 
             return filteredItems;
         })
