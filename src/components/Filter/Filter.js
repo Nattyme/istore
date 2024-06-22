@@ -44,15 +44,44 @@ const Filter = ({filter, setFilter}) => {
     );
     }
 
-    const colorsList = [
-        'white',
-        'gray',
-        'black',
-        'spacegray',
-        'gold',
-        'blue',
-        'green'
-    ]
+    const [colorsList, setColorsList] = useState({
+        'white': true,
+        'gray': true,
+        'black': true,
+        'spacegray': true,
+        'gold': true,
+        'blue': true,
+        'green': true
+    });
+
+    useEffect (() => {
+        let colorsListFilter = [];
+
+        for(let key in colorsList) {
+            if (colorsList[key]) colorsListFilter.push(key);
+        }
+
+        setFilter ((prev) => {
+            return {
+                ...prev,
+                color: colorsListFilter,
+            }
+        });
+
+    }, [colorsList]);
+
+    let colorsListJSX = [];
+
+    for (let key in colorsList) {
+        colorsListJSX.push(
+            <ColorCheckbox 
+                key={key} 
+                colorsList={colorsList}
+                setColorsList={setColorsList}
+                color={key} 
+            />
+        )
+    }
 
     return (
         <>
@@ -80,11 +109,7 @@ const Filter = ({filter, setFilter}) => {
                     <div className="filter">
                         <div className="filter__title">Цвет</div>
                         <div className="filter__body filter__body--colors-list">
-
-                            {colorsList.map((el) => {
-                                return <ColorCheckbox key={el} color={el} />
-                            })}
-                           
+                            {colorsListJSX}
                         </div>
                     </div>
 
