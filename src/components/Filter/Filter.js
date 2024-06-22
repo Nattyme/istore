@@ -8,7 +8,7 @@ const Filter = ({filter, setFilter}) => {
 
     const [price, setPrice] = useState({
         min: 10000,
-        max: 100000
+        max: 200000
     });
 
     const memoryList = [

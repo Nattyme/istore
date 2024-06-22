@@ -21,17 +21,27 @@ function App() {
         category: 'all',
         price: {
             min: 10000,
-            max: 100000,
+            max: 200000,
         },
     });
 
     useEffect(() => {
         setProducts(function(){
-            return productsData.filter((product)=>{
+            let filteredItems = [];
+            //Фильтр по категории
+            filteredItems = productsData.filter((product) => {
+                if (filter.category == 'all') return true;
+                return filter.category == product.cat;
+            })
+
+            //Фильтр по цене
+            filteredItems = filteredItems.filter((product)=>{
                 if (product.price >= filter.price.min && product.price <= filter.price.max) {
                     return true;
                 }
             })
+
+            return filteredItems;
         })
     }, [filter]);
 
