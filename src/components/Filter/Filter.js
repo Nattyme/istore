@@ -11,13 +11,28 @@ const Filter = ({filter, setFilter}) => {
         max: 200000
     });
 
-    const memoryList = [
-        '128 Gb',
-        '256 Gb',
-        '512 Gb',
-        '1 Tb',
-        '2 Tb'
-    ];
+    // const memoryList = [
+    //     '128 Gb',
+    //     '256 Gb',
+    //     '512 Gb',
+    //     '1 Tb',
+    //     '2 Tb'
+    // ];
+
+    const memoryList = {
+        '128 Gb': true,
+        '256 Gb': true,
+        '512 Gb': true,
+        '1 Tb': true,
+        '2 Tb': true
+    }
+
+    let memoryListJSX = [];
+    for (let key in memoryList) {
+        memoryListJSX.push(
+        <Checkbox key={key} value={key} state={memoryList[key]}/>
+    );
+    }
 
     const colorsList = [
         'white',
@@ -48,11 +63,7 @@ const Filter = ({filter, setFilter}) => {
                     <div className="filter">
                         <div className="filter__title">Объем памяти</div>
                         <div className="filter__body filter__body--checkbox-list">
-
-                            {memoryList.map((el)=> {
-                                return <Checkbox key={el} value={el} />
-                            })}
-                            
+                            {memoryListJSX}
                         </div>
                     </div>
 

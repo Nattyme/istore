@@ -24,7 +24,7 @@ function App() {
             max: 200000,
         },
 
-        memory: ['512Gb', '1Tb', '2Tb'],
+        memory: ['512 Gb', '1 Tb', '2 Tb'],
     });
 
     useEffect(() => {

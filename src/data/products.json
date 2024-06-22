@@ -13,7 +13,7 @@
         "title": "iMac",
         "price": 140000,
         "cat": "comp",
-        "memory": "2Tb"
+        "memory": "2 Tb"
     },
 
     {
@@ -22,7 +22,7 @@
         "title": "iPad",
         "price": 60000,
         "cat": "tablet",
-        "memory": "64Gb"
+        "memory": "64 Gb"
     },
 
     {
@@ -31,7 +31,7 @@
         "title": "iPhone",
         "price": 50000,
         "cat": "phone",
-        "memory": "128Gb"
+        "memory": "128 Gb"
     },
 
     {
@@ -40,7 +40,7 @@
         "title": "MacMini",
         "price": 78280,
         "cat": "comp",
-        "memory": "1Tb"
+        "memory": "1 Tb"
     },
 
     {
@@ -49,7 +49,7 @@
         "title": "MacPro",
         "price": 120000,
         "cat": "comp",
-        "memory": "1Tb"
+        "memory": "1 Tb"
     },
 
     {
@@ -58,7 +58,7 @@
         "title": "MacPro",
         "price": 180000,
         "cat": "comp",
-        "memory": "2Tb"
+        "memory": "2 Tb"
     },
 
     {
@@ -67,6 +67,6 @@
         "title": "Apple MacBook Air 13",
         "price": 110000,
         "cat": "note",
-        "memory": "512Gb"
+        "memory": "512 Gb"
     }
 ]
