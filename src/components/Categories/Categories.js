@@ -12,8 +12,6 @@ const Categories = ({cats, catsData, setFilter}) => {
 
         const clickHandler = (e) => {
             e.preventDefault();
-            console.log('Change category!')
-            console.log(e.target.dataset.cat)
             setFilter ((prev) => {
                 return {
                     ...prev,

@@ -23,6 +23,7 @@ const Main = ({products, filter, setFilter, cats, catsData}) => {
                     <p>Категория:{filter.category}</p>
                     <p>Цена от:{filter.price.min}</p>
                     <p>Цена до:{filter.price.max}</p>
+                    <p>Цвет:</p>
                 </div>
                 {products.map((product, index) => (
                     <Card key={index} product={product} />

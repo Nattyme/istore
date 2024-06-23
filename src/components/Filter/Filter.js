@@ -8,11 +8,11 @@ import './style.css';
 const Filter = ({filter, setFilter}) => {
 
     const [memoryList, setMemoryList] = useState({
-        '128 Gb': true,
-        '256 Gb': true,
-        '512 Gb': true,
-        '1 Tb': true,
-        '2 Tb': true
+        '128 Gb': false,
+        '256 Gb': false,
+        '512 Gb': false,
+        '1 Tb': false,
+        '2 Tb': false
     });
 
     useEffect(() => {
@@ -45,13 +45,13 @@ const Filter = ({filter, setFilter}) => {
     }
 
     const [colorsList, setColorsList] = useState({
-        'white': true,
-        'gray': true,
-        'black': true,
-        'spacegray': true,
-        'gold': true,
-        'blue': true,
-        'green': true
+        'white': false,
+        'gray': false,
+        'black': false,
+        'spacegray': false,
+        'gold': false,
+        'blue': false,
+        'green': false
     });
 
     useEffect (() => {
@@ -82,6 +82,7 @@ const Filter = ({filter, setFilter}) => {
             />
         )
     }
+    console.log(colorsListJSX)
 
     return (
         <>

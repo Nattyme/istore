@@ -7,7 +7,6 @@ const Checkbox = (props) => {
             return {
                 ...prev,
                 [e.target.value]: e.target.checked,
-
             }
 
         });

@@ -15,16 +15,19 @@ function App() {
         if(!cats.includes(product.cat)) {
             cats.push(product.cat);
         }
-    })
+    });
 
     const [filter, setFilter] = useState({
         category: 'all',
+
         price: {
             min: 10000,
             max: 200000,
         },
 
         memory: ['512 Gb', '1 Tb', '2 Tb'],
+
+        color: ['white', 'gray'],
     });
 
     useEffect(() => {
@@ -49,6 +52,12 @@ function App() {
                 if (filter.memory.length === 0) return true;
 
                 return filter.memory.includes(product.memory); 
+            });
+
+            //Фильтр по цвету
+            filteredItems = filteredItems.filter((product)=>{
+                if (filter.color.length === 0) return true;
+                return filter.color.includes(product.color); 
             });
 
             return filteredItems;

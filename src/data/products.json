@@ -4,7 +4,8 @@
         "imgRetina": "01@2x",
         "title": "Часы Apple Watch Белый",
         "price": 18000,
-        "cat": "watch"
+        "cat": "watch",
+        "color": "white"
     },
 
     { 
@@ -13,7 +14,8 @@
         "title": "iMac",
         "price": 140000,
         "cat": "comp",
-        "memory": "2 Tb"
+        "memory": "2 Tb",
+        "color": "gray"
     },
 
     {
@@ -22,7 +24,8 @@
         "title": "iPad",
         "price": 60000,
         "cat": "tablet",
-        "memory": "64 Gb"
+        "memory": "64 Gb",
+        "color": "gray"
     },
 
     {
@@ -31,7 +34,8 @@
         "title": "iPhone",
         "price": 50000,
         "cat": "phone",
-        "memory": "128 Gb"
+        "memory": "128 Gb",
+        "color": "gray"
     },
 
     {
@@ -40,7 +44,8 @@
         "title": "MacMini",
         "price": 78280,
         "cat": "comp",
-        "memory": "1 Tb"
+        "memory": "1 Tb",
+        "color": "gold"
     },
 
     {
@@ -49,7 +54,8 @@
         "title": "MacPro",
         "price": 120000,
         "cat": "comp",
-        "memory": "1 Tb"
+        "memory": "1 Tb",
+        "color": "black"
     },
 
     {
@@ -58,7 +64,8 @@
         "title": "MacPro",
         "price": 180000,
         "cat": "comp",
-        "memory": "2 Tb"
+        "memory": "2 Tb",
+        "color": "black"
     },
 
     {
@@ -67,6 +74,7 @@
         "title": "Apple MacBook Air 13",
         "price": 110000,
         "cat": "note",
-        "memory": "512 Gb"
+        "memory": "512 Gb",
+        "color": "spacegray"
     }
 ]
