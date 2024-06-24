@@ -1,5 +1,10 @@
 [
     {
+        "slug": "all",
+        "title": "Все"
+    },
+
+    {
         "slug": "watch",
         "title": "Часы"
     },

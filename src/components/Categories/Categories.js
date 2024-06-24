@@ -1,6 +1,6 @@
 import './style.css';
 
-const Categories = ({cats, catsData, setFilter}) => {
+const Categories = ({cats, catsData, filter, setFilter}) => {
     const catsList = cats.map((cat, index) => {
         
         const catInfo = catsData.find((value) => {
@@ -12,6 +12,7 @@ const Categories = ({cats, catsData, setFilter}) => {
 
         const clickHandler = (e) => {
             e.preventDefault();
+
             setFilter ((prev) => {
                 return {
                     ...prev,
@@ -21,7 +22,7 @@ const Categories = ({cats, catsData, setFilter}) => {
         }
 
         return (
-            <li key={index}>
+            <li key={index} className={filter.category === cat ? 'active' : '' }>
                 <a href="#!" data-cat={cat} onClick={clickHandler}>
                     {catInfo && catInfo.title}
                 </a>

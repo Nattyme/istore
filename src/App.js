@@ -10,7 +10,11 @@ function App() {
 
     const [products, setProducts] = useState(productsData);
 
+    // Формирую список категорий для фильтра
+    // На старте "all"
     const cats = ['all'];
+    
+    //Далее добавляю категории из товаров в cats
     productsData.forEach((product)=>{
         if(!cats.includes(product.cat)) {
             cats.push(product.cat);
@@ -25,7 +29,7 @@ function App() {
             max: 200000,
         },
 
-        memory: ['512 Gb', '1 Tb', '2 Tb'],
+        memory: [], //'512 Gb', '1 Tb', '2 Tb'
 
         colors: []
     });

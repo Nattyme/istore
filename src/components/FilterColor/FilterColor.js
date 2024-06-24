@@ -5,13 +5,13 @@ const FilterColor = ({filter, setFilter}) => {
 
     // Состояние по цветам для рендера фильтра
     const [colors, setColors] = useState({
-        white: true,
-        gray: true,
+        white: false,
+        gray: false,
         black: false,
         spacegray: false,
         gold: false,
         blue: false,
-        green: true
+        green: false
     });
 
     // Обновляем глобальный фильтр для фильтрации товаров

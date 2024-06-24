@@ -10,6 +10,7 @@ const Main = ({products, filter, setFilter, cats, catsData}) => {
                <Categories 
                     cats={cats} 
                     catsData={catsData}
+                    filter={filter}
                     setFilter={setFilter}
                 />
                <Filter 
