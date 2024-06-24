@@ -1,4 +1,3 @@
-import { useState as useState} from 'react';
 import './style.css';
 
 const Input = ({value, setFilter, type}) => {

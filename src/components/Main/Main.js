@@ -3,29 +3,27 @@ import {Categories as Categories} from '../Categories/Categories';
 import {Filter as Filter}  from '../Filter/Filter';
 import {Card as Card} from '../Card/Card';
 
-const Main = ({products, filter, setFilter, cats, catsData}) => {
+const Main = ({products, cats, catsData}) => {
+    
     return (
         <main className="main container">
             <aside className="sidebar">
                <Categories 
                     cats={cats} 
                     catsData={catsData}
-                    filter={filter}
-                    setFilter={setFilter}
                 />
-               <Filter 
-                    filter={filter} 
-                    setFilter={setFilter}/>
+               <Filter />
             </aside>
 
 
             <div className="content content--cards-grid">
-                <div>
+                {/* <div>
                     <p>Категория:{filter.category}</p>
                     <p>Цена от:{filter.price.min}</p>
                     <p>Цена до:{filter.price.max}</p>
                     <p>Цвет:</p>
-                </div>
+                </div> */}
+
                 {products.map((product, index) => (
                     <Card key={index} product={product} />
                 ))}

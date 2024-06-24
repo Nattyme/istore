@@ -1,10 +1,12 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, createContext } from 'react';
 import {Header as Header} from './components/Header/Header';
 import {Main as Main} from './components/Main/Main';
 import {Footer as Footer} from './components/Footer/Footer';
 
 import productsData from './data/products.json';
 import catsData from './data/cats.json';
+
+export const AppContext = createContext(null);
 
 function App() {
 
@@ -13,7 +15,7 @@ function App() {
     // Формирую список категорий для фильтра
     // На старте "all"
     const cats = ['all'];
-    
+
     //Далее добавляю категории из товаров в cats
     productsData.forEach((product)=>{
         if(!cats.includes(product.cat)) {
@@ -72,15 +74,15 @@ function App() {
 
     return (
         <div className="App">
-        <Header />
-        <Main 
-            products = {products} 
-            filter={filter} 
-            setFilter={setFilter}
-            catsData={catsData}
-            cats={cats}
-            />
-        <Footer />
+            <AppContext.Provider value={{filter, setFilter}}>
+                <Header />
+                <Main 
+                    products = {products} 
+                    catsData={catsData}
+                    cats={cats}
+                    />
+                <Footer />
+            </AppContext.Provider>
         </div> 
     );
 }

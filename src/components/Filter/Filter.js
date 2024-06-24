@@ -1,9 +1,14 @@
+import { useContext } from 'react';
+import { AppContext } from '../../App';
 import './style.css';
 import { FilterPrice } from '../FilterPrice/FilterPrice';
 import { FilterMemory } from '../FilterMemory/FilterMemory';
 import { FilterColor } from '../FilterColor/FilterColor';
 
-const Filter = ({filter, setFilter}) => {
+
+const Filter = () => {
+    const {filter, setFilter} = useContext(AppContext);
+
     return (
         <>
             <div className="widget">

@@ -1,6 +1,10 @@
+import { useContext } from 'react';
+import { AppContext } from '../../App';
 import './style.css';
 
-const Categories = ({cats, catsData, filter, setFilter}) => {
+const Categories = ({cats, catsData}) => {
+    const {filter, setFilter} = useContext(AppContext);
+
     const catsList = cats.map((cat, index) => {
         
         const catInfo = catsData.find((value) => {
