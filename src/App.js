@@ -27,7 +27,7 @@ function App() {
 
         memory: ['512 Gb', '1 Tb', '2 Tb'],
 
-        color: ['white', 'gray'],
+        colors: []
     });
 
     useEffect(() => {
@@ -54,10 +54,11 @@ function App() {
                 return filter.memory.includes(product.memory); 
             });
 
-            //Фильтр по цвету
+            //Фильтр по цветам
             filteredItems = filteredItems.filter((product)=>{
-                if (filter.color.length === 0) return true;
-                return filter.color.includes(product.color); 
+                if (filter.colors.length === 0) return true;
+
+                return filter.colors.includes(product.color); 
             });
 
             return filteredItems;

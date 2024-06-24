@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import {Checkbox as Checkbox} from '../Checkbox/Checkbox';
 
 const FilterMemory = ({filter, setFilter}) => {
+    // Состояние по памяти для рендера фильтра
     const [memoryList, setMemoryList] = useState({
         '128 Gb': false,
         '256 Gb': false,
@@ -10,6 +11,7 @@ const FilterMemory = ({filter, setFilter}) => {
         '2 Tb': false
     });
 
+    // Обновляем глобальный фильтр для фильтрации товаров
     useEffect(() => {
         let memoryFilter = [];
 
@@ -26,6 +28,7 @@ const FilterMemory = ({filter, setFilter}) => {
         });
     }, [memoryList]);
 
+    // Генерируем jsx разметку
     let memoryListJSX = [];
 
     for (let key in memoryList) {
