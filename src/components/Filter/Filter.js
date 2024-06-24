@@ -4,6 +4,7 @@ import {Checkbox as Checkbox} from '../Checkbox/Checkbox';
 import {ColorCheckbox as ColorCheckbox} from '../ColorCheckbox/ColorCheckbox';
 import {Input as Input} from '../Input/Input';
 import './style.css';
+import { FilterPrice } from '../FilterPrice/FilterPrice';
 
 const Filter = ({filter, setFilter}) => {
 
@@ -90,15 +91,10 @@ const Filter = ({filter, setFilter}) => {
                 <div className="widget__title">Фильтр</div>
 
                 <div className="widget__body widget__body--filters-list">
-                    <div className="filter">
-                        <div className="filter__title">Цена</div>
-                        <div className="filter__body filter__body--price">
-                            <Input type="min" value={`${filter.price.min}`} setFilter={setFilter}/>
-                            <span>-</span>
-
-                            <Input type="max" value={`${filter.price.max}`} setFilter={setFilter}/>
-                        </div>
-                    </div>
+                    <FilterPrice 
+                        filter={filter}
+                        setFilter={setFilter}
+                    />
 
                     <div className="filter">
                         <div className="filter__title">Объем памяти</div>
