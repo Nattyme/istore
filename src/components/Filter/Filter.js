@@ -1,50 +1,12 @@
-import { useState } from 'react';
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import {Checkbox as Checkbox} from '../Checkbox/Checkbox';
 import {ColorCheckbox as ColorCheckbox} from '../ColorCheckbox/ColorCheckbox';
 import {Input as Input} from '../Input/Input';
 import './style.css';
 import { FilterPrice } from '../FilterPrice/FilterPrice';
+import { FilterMemory } from '../FilterMemory/FilterMemory';
 
 const Filter = ({filter, setFilter}) => {
-
-    const [memoryList, setMemoryList] = useState({
-        '128 Gb': false,
-        '256 Gb': false,
-        '512 Gb': false,
-        '1 Tb': false,
-        '2 Tb': false
-    });
-
-    useEffect(() => {
-        let memoryFilter = [];
-
-        for(let key in memoryList) {
-            if (memoryList[key]) memoryFilter.push(key);
-        }
-
-
-        setFilter((prev) => {
-            return {
-                ...prev,
-                memory: memoryFilter,
-            };
-        });
-    }, [memoryList]);
-
-    let memoryListJSX = [];
-
-    for (let key in memoryList) {
-        memoryListJSX.push(
-        <Checkbox 
-            key={key}
-            memoryList={memoryList} 
-            setMemoryList={setMemoryList}
-            value={key} 
-        />
-    );
-    }
-
     const [colorsList, setColorsList] = useState({
         'white': false,
         'gray': false,
@@ -96,12 +58,10 @@ const Filter = ({filter, setFilter}) => {
                         setFilter={setFilter}
                     />
 
-                    <div className="filter">
-                        <div className="filter__title">Объем памяти</div>
-                        <div className="filter__body filter__body--checkbox-list">
-                            {memoryListJSX}
-                        </div>
-                    </div>
+                    <FilterMemory 
+                        filter={filter}
+                        setFilter={setFilter}
+                    />
 
                     <div className="filter">
                         <div className="filter__title">Цвет</div>
