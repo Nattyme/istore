@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import {Input as Input} from '../Input/Input';
 
 import RangeSlider from 'react-range-slider-input';
@@ -6,8 +6,18 @@ import 'react-range-slider-input/dist/style.css';
 
 const FilterPrice = ({filter, setFilter}) => {
 
-    const [value, setValue] = useState([30, 60]);
-
+    const [value, setValue] = useState([filter.price.min, filter.price.max]);
+    useEffect (() => {
+        setFilter((prev) => {
+            return {
+                ...prev,
+                price: {
+                    min: value[0],
+                    max: value[1]
+                }
+            }
+        })
+    }, [value]);
 
     return ( 
         <div className="filter">
@@ -27,8 +37,15 @@ const FilterPrice = ({filter, setFilter}) => {
                 />
             </div>
 
-            <div className="title">Controlled</div>
-            <RangeSlider value={value} onInput={setValue} />
+            <div className='filter__body--range'>
+                <RangeSlider 
+                    id="range-slider-gradient"
+                    value={value} 
+                    onInput={setValue} 
+                    min={0} 
+                    max={200000}
+                />
+            </div>
 
         </div>
      );
