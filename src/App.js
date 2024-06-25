@@ -80,7 +80,7 @@ function App() {
                     products = {products} 
                     catsData={catsData}
                     cats={cats}
-                    />
+                />
                 <Footer />
             </AppContext.Provider>
         </div> 
